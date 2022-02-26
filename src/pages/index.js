@@ -5,10 +5,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import EmbedVideo from "../components/embed-video"
+import SpotifyPlayer from "../components/spotify-player"
 
 import "../assets/scss/index.scss"
 import { biography } from "../lib/biography"
 import { youtubeVideos } from "../lib/videos"
+import { playlists } from "../lib/playlists"
 
 const IndexPage = ({ data }) => {
   const keepAustinImage = getImage(data.keepAustinImage)
@@ -37,6 +39,13 @@ const IndexPage = ({ data }) => {
           <div className="about-section font-bold">
             {biography.map(paragraph => (
               <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+        <div className="page-content__row">
+          <div className="spotify-playlists">
+            {playlists.map(playlist => (
+              <SpotifyPlayer type={playlist.type} spotifyId={playlist.id} />
             ))}
           </div>
         </div>

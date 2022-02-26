@@ -1,6 +1,38 @@
 @import "./layout.scss";
 @import "./fonts.scss";
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 30em) {
+      @content;
+    } // 480px
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (min-width: 48em) {
+      @content;
+    } // 768px
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (min-width: 62em) {
+      @content;
+    } // 992px
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 75em) {
+      @content;
+    } // 1200
+  }
+
+  @if $breakpoint == xxl {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800
+  }
+}
+
 $color-white: #fff;
 $font-size-base-pixel: 16;
 
@@ -81,7 +113,7 @@ p {
 .page-marquee__container {
   @extend .flex-center;
   flex-direction: column;
-  margin-top: rem(150);
+  margin-top: rem(80);
 
   h1 {
     font-size: rem(70);
@@ -91,7 +123,27 @@ p {
 }
 
 .page-marquee__logo {
-  font-size: rem(800);
+  font-size: rem(200);
+
+  @include respond(sm) {
+    font-size: rem(300);
+  }
+
+  @include respond(md) {
+    font-size: rem(400);
+  }
+
+  @include respond(lg) {
+    font-size: rem(400);
+  }
+
+  @include respond(xl) {
+    font-size: rem(450);
+  }
+
+  @include respond(xxl) {
+    font-size: rem(610);
+  }
 }
 
 .page-content__row {
@@ -116,8 +168,42 @@ p {
   aspect-ratio: 16 / 9;
 }
 
-.about-section {
-  p {
-    text-indent: rem(93);
+.about-section p {
+  text-indent: rem(33);
+
+  @include respond(md) {
+    text-indent: rem(53);
+  }
+
+  @include respond(xl) {
+    text-indent: rem(73);
+  }
+}
+
+.spotify-playlists {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(lg) {
+    flex-direction: row;
+  }
+}
+
+.spotify-player {
+  width: 100%;
+  display: inline-block;
+  margin-right: rem(20);
+  margin-bottom: rem(40);
+  left: 0;
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  @include respond(lg) {
+    width: 33%;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 }
