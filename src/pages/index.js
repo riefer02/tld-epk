@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import EmbedVideo from "../components/embed-video"
 import SpotifyPlayer from "../components/spotify-player"
+import ContentRow from "../components/content-row"
 
 import "../assets/scss/index.scss"
 import { biography } from "../lib/biography"
@@ -29,25 +30,25 @@ const IndexPage = ({ data }) => {
         <h1>new waves rock band from austin, texas</h1>
       </div>
       <div className="page-content">
-        <div className="page-content__row">
+        <ContentRow animation="slide-up">
           <a
             className="panel-image__link flex-center"
             href="https://www.keep-austin.com/article/137"
           >
             <GatsbyImage image={keepAustinImage} placeholder="blurred" alt="" />
           </a>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="slide-left">
           <EmbedVideo videoId="-bkpw7aevDw" />
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="slide-up">
           <div className="about-section font-bold">
             {biography.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="slide-right">
           <div className="spotify-playlists">
             {playlists.map(playlist => (
               <SpotifyPlayer
@@ -57,18 +58,18 @@ const IndexPage = ({ data }) => {
               />
             ))}
           </div>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="fade">
           <div className="panel-image__full-width">
             <GatsbyImage image={poolImage} placeholder="blurred" alt="" />
           </div>
-        </div>
+        </ContentRow>
         {youtubeVideos.map((videoId, index) => (
-          <div key={index} className="page-content__row">
+          <ContentRow key={index} animation="fade">
             <EmbedVideo videoId={videoId} />
-          </div>
+          </ContentRow>
         ))}
-        <div className="page-content__row">
+        <ContentRow animation="fade">
           <a href="https://open.spotify.com/album/5R1T2Y89wwXLNgxeAoZREA">
             <div className="album-showcase__item">
               <GatsbyImage
@@ -79,8 +80,8 @@ const IndexPage = ({ data }) => {
               <h2>Habitable Zone (2021)</h2>
             </div>
           </a>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="fade">
           <a href="https://open.spotify.com/album/0ZOzvLIsvAL1dP5Ed01TEE">
             <div className="album-showcase__item">
               <GatsbyImage
@@ -91,8 +92,8 @@ const IndexPage = ({ data }) => {
               <h2>The Lewd Dudes (2018)</h2>
             </div>
           </a>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="fade">
           <a href="https://open.spotify.com/album/2fIlIJkL10C6IMDhxa7bms">
             <div className="album-showcase__item">
               <GatsbyImage
@@ -103,8 +104,8 @@ const IndexPage = ({ data }) => {
               <h2>Malbec (2019)</h2>
             </div>
           </a>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="fade">
           <div className="button-list">
             <h1>Press</h1>
             <ul>
@@ -117,8 +118,8 @@ const IndexPage = ({ data }) => {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="slide-right">
           <div className="button-list">
             <h1>Resources</h1>
             <ul>
@@ -131,8 +132,8 @@ const IndexPage = ({ data }) => {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="page-content__row">
+        </ContentRow>
+        <ContentRow animation="slide-left">
           <div className="button-list">
             <h1>Social Media</h1>
             <ul>
@@ -145,11 +146,13 @@ const IndexPage = ({ data }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </ContentRow>
       </div>
-      <footer className="mx-auto w-full text-center mb-10 secondary-font-family">
-        &#169; {new Date().getFullYear()} The Lewd Dudes
-      </footer>
+      <ContentRow animation="slide-up">
+        <footer className="mx-auto w-full text-center mb-10 secondary-font-family">
+          &#169; {new Date().getFullYear()} The Lewd Dudes
+        </footer>
+      </ContentRow>
     </Layout>
   )
 }
