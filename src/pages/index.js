@@ -38,17 +38,17 @@ const IndexPage = ({ data }) => {
             <GatsbyImage image={keepAustinImage} placeholder="blurred" alt="" />
           </a>
         </ContentRow>
-        <ContentRow animation="slide-left">
+        <ContentRow animation="fade">
           <EmbedVideo videoId="-bkpw7aevDw" />
         </ContentRow>
-        <ContentRow animation="slide-up">
+        <ContentRow animation="">
           <div className="about-section font-bold">
             {biography.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
         </ContentRow>
-        <ContentRow animation="slide-right">
+        <ContentRow animation="slide-up">
           <div className="spotify-playlists">
             {playlists.map(playlist => (
               <SpotifyPlayer
@@ -119,7 +119,7 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </ContentRow>
-        <ContentRow animation="slide-right">
+        <ContentRow animation="slide-up">
           <div className="button-list">
             <h1>Resources</h1>
             <ul>
@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </ContentRow>
-        <ContentRow animation="slide-left">
+        <ContentRow animation="slide-up">
           <div className="button-list">
             <h1>Social Media</h1>
             <ul>
