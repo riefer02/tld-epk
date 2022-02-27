@@ -163,17 +163,17 @@ export const query = graphql`
   query IndexQuery {
     keepAustinImage: file(relativePath: { eq: "keep-austin-press.jpeg" }) {
       childImageSharp {
-        gatsbyImageData(webpOptions: { quality: 50 })
+        gatsbyImageData(placeholder: BLURRED, webpOptions: { quality: 50 })
       }
     }
     poolImage: file(relativePath: { eq: "pool-tld.jpg" }) {
       childImageSharp {
-        gatsbyImageData(webpOptions: { quality: 50 })
+        gatsbyImageData(placeholder: BLURRED, webpOptions: { quality: 50 })
       }
     }
     malbecImage: file(relativePath: { eq: "malbec-album-cover.jpg" }) {
       childImageSharp {
-        gatsbyImageData(webpOptions: { quality: 50 })
+        gatsbyImageData(placeholder: BLURRED, webpOptions: { quality: 50 })
       }
       absolutePath
     }
@@ -181,13 +181,13 @@ export const query = graphql`
       relativePath: { eq: "habitable-zone-album-cover.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(webpOptions: { quality: 50 })
+        gatsbyImageData(placeholder: BLURRED, webpOptions: { quality: 50 })
       }
       absolutePath
     }
     epImage: file(relativePath: { eq: "tld-album-cover.jpg" }) {
       childImageSharp {
-        gatsbyImageData(webpOptions: { quality: 50 })
+        gatsbyImageData(placeholder: BLURRED, webpOptions: { quality: 50 })
       }
       absolutePath
     }
