@@ -2,7 +2,12 @@ import { useEffect, useState } from "react"
 
 function useIntersectionObserver(
   elementRef,
-  { threshold = 0, root = null, rootMargin = "100%", freezeOnceVisible = false }
+  {
+    threshold = 0.1,
+    root = null,
+    rootMargin = "100%",
+    freezeOnceVisible = true,
+  }
 ) {
   const [entry, setEntry] = useState()
 
