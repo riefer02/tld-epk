@@ -331,9 +331,9 @@ p {
 .button {
   @extend .flex-center;
   width: rem(270);
-  font-size: $font-size-h4;
+  font-size: $font-size-md;
   margin: rem(20) rem(10);
-  height: rem(77);
+  height: rem(45);
   text-align: center;
   border: none;
   background-size: 300% 100%;
@@ -352,6 +352,8 @@ p {
   @include respond(md) {
     margin: rem(20);
     width: rem(400);
+    height: rem(77);
+    font-size: $font-size-h4;
   }
 
   @include respond(lg) {
