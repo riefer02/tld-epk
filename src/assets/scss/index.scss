@@ -41,6 +41,71 @@ $font-size-base-pixel: 16;
   @return $remValue;
 }
 
+$font-size-xs: rem(13);
+$font-size-sm: rem(14);
+$font-size-md: rem($font-size-base-pixel);
+$font-size-lg: rem(18);
+$font-size-xl: rem(20);
+
+$font-size-h1: rem(56);
+$font-size-h2: rem(40);
+$font-size-h3: rem(32);
+$font-size-h4: rem(24);
+$font-size-h5: rem(22);
+$font-size-h6: rem(18);
+
+h1 {
+  font-size: rem(32);
+
+  @include respond(md) {
+    font-size: rem(40);
+  }
+
+  @include respond(xl) {
+    font-size: $font-size-h1;
+  }
+}
+
+h2 {
+  font-size: rem(28);
+
+  @include respond(md) {
+    font-size: rem(32);
+  }
+
+  @include respond(xl) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3 {
+  font-size: rem(24);
+
+  @include respond(md) {
+    font-size: rem(28);
+  }
+
+  @include respond(xl) {
+    font-size: $font-size-h3;
+  }
+}
+
+p {
+  font-size: rem(16);
+
+  @include respond(md) {
+    font-size: rem(16);
+  }
+
+  @include respond(xl) {
+    font-size: $font-size-lg;
+  }
+
+  @include respond(xxl) {
+    font-size: $font-size-h5;
+  }
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -59,6 +124,12 @@ $font-size-base-pixel: 16;
   font-style: normal;
 }
 
+.tertiary-font-family {
+  font-family: "MuseoModerno";
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   margin: 0;
@@ -70,18 +141,20 @@ body {
   color: $color-white;
 }
 
-h1,
+h1 {
+  @extend .secondary-font-family;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @extend .secondary-font-family;
+  @extend .primary-font-family;
 }
 
 p {
-  @extend .primary-font-family;
-  font-size: rem(25);
+  @extend .secondary-font-family;
 }
 
 .page-background__image {
@@ -113,12 +186,15 @@ p {
 .page-marquee__container {
   @extend .flex-center;
   flex-direction: column;
-  margin-top: rem(80);
+  margin-top: rem(55);
 
   h1 {
-    font-size: rem(70);
     text-align: center;
     margin-top: rem(40);
+
+    @include respond(xxl) {
+      font-size: rem(70);
+    }
   }
 }
 
@@ -144,10 +220,18 @@ p {
   @include respond(xxl) {
     font-size: rem(610);
   }
+
+  h1 {
+  }
 }
 
 .page-content__row {
   margin: rem(60) auto;
+}
+
+.embed {
+  max-width: 970px;
+  margin: 0 auto;
 }
 
 .embed__container {
@@ -205,5 +289,80 @@ p {
 
   &:last-of-type {
     margin-right: 0;
+  }
+}
+
+.album-showcase__item {
+  width: rem(200);
+  margin: rem(80) auto rem(80);
+
+  @include respond(md) {
+    width: rem(400);
+  }
+
+  @include respond(lg) {
+    width: rem(500);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: rem(15);
+  }
+}
+
+.button-list {
+  @extend .flex-center;
+  flex-direction: column;
+
+  ul {
+    margin-left: unset;
+  }
+}
+
+.button {
+  @extend .flex-center;
+  width: rem(270);
+  font-size: $font-size-h4;
+  margin: rem(20) rem(10);
+  height: rem(77);
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: rem(50);
+  transition: all 0.4s ease-in-out;
+  padding: 0 rem(10);
+  background-image: linear-gradient(
+    to right,
+    rgba(#fc6076, 0.7),
+    rgba(#ff9a44, 0.7),
+    rgba(#ef9d43, 0.7),
+    rgba(#e75516, 0.7)
+  );
+  cursor: pointer;
+
+  @include respond(md) {
+    margin: rem(20);
+    width: rem(400);
+  }
+
+  @include respond(lg) {
+    width: rem(500);
+  }
+
+  &:hover {
+    background-position: 100% 0;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(
+      to right,
+      rgba(#fc6076, 1),
+      rgba(#ff9a44, 1),
+      rgba(#ef9d43, 1),
+      rgba(#e75516, 1)
+    );
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+  }
+
+  &:focus {
+    outline: none;
   }
 }

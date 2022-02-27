@@ -13,7 +13,7 @@ export default function SpotifyPlayer({ type, spotifyId }) {
           position: "absolute",
           border: 0,
         }}
-        allowfullscreen
+        allowFullScreen
         allow="encrypted-media;"
       ></iframe>
     </div>

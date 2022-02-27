@@ -17,6 +17,15 @@
 }
 
 @font-face {
+  font-family: "MuseoModerno";
+  src: url("../fonts/MuseoModerno-Bold.woff2") format("woff2"),
+    url("../fonts/MuseoModerno-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?28oti1");
   src: url("../fonts/icomoon.eot?28oti1#iefix") format("embedded-opentype"),
