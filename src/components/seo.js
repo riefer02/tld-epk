@@ -9,9 +9,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 
 function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, ogImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,6 +20,12 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            logo
+          }
+        }
+        ogImage: file(relativePath: { eq: "tld-2021-black-logo-1x1.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, pngOptions: { quality: 50 })
           }
         }
       }
@@ -27,6 +34,7 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const metaImage = getImage(ogImage)
 
   return (
     <Helmet
@@ -67,6 +75,10 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `og:image`,
+          content: metaImage.images.fallback.src,
         },
       ].concat(meta)}
     />

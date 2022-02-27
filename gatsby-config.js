@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `The Lewd Dudes`,
-    description: `The official destination for The Lewd Dudes music group from Austin, TX.`,
+    description: `The official destination for The Lewd Dudes new wave rock music and band from Austin, TX.`,
     author: `@riefer02`,
-    siteUrl: `https://www.thelewddudes.com`,
+    siteUrl: `https://thelewddudes.com`,
+    logo: `./src/images/tld-2021-black-logo-1x1.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,7 +31,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/tld-favicon-black.png`, // This path is relative to the root of the site.
+        icon: `src/images/tld-2021-black-logo-1x1.png`, // This path is relative to the root of the site.
       },
     },
     {
