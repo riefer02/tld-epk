@@ -163,8 +163,9 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .page-background__overlay {
