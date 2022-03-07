@@ -4,7 +4,7 @@ export const socialMedia = [
     url: "https://open.spotify.com/artist/65dA1HHvGplN8EcCk4YZOQ",
   },
   {
-    label: "Instragram",
+    label: "Instagram",
     url: "https://www.instagram.com/thelewddudes/?hl=en",
   },
   {
