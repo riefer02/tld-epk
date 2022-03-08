@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <Seo title="Home" />
       <div className="page-marquee__container">
         <i className="page-marquee__logo icon-tld-logo"></i>
-        <h1>new waves rock band from austin, texas</h1>
+        <h1>The Lewd Dudes | New Wave Rock Band</h1>
       </div>
       <div className="page-content">
         <ContentRow animation="slide-up">

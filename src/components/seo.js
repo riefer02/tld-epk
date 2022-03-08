@@ -23,7 +23,7 @@ function Seo({ description, lang, meta, title }) {
             logo
           }
         }
-        ogImage: file(relativePath: { eq: "tld-2021-black-logo-1x1.png" }) {
+        ogImage: file(relativePath: { eq: "tld-renee-dominguez.jpg" }) {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, pngOptions: { quality: 50 })
           }
