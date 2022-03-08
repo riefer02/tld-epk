@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="The Lewd Dudes | TX Rock Band" />
       <div className="page-marquee__container">
         <i className="page-marquee__logo icon-tld-logo"></i>
         <h1>The Lewd Dudes | New Wave Rock Band</h1>
