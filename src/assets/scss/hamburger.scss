@@ -29,5 +29,53 @@
   height: 4px;
   background-color: $color-black;
   border-radius: 3px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+// --------------------------------
+// Hamburger animation
+// --------------------------------
+
+.hamburger__line-group {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger__line-group.hamburger--open {
+  transform: rotate(45deg);
+}
+
+.hamburger__line-group:before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width:rem(62);
+  height:rem(62);
+  border: 5px solid $color-white;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger__line-group.hamburger--open:before {
+  border: 5px solid $color-black;
+}
+
+.hamburger__line-group.hamburger--open .hamburger__line {
+  width: rem(30);
+}
+
+.hamburger__line-group.hamburger--open .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger__line-group.hamburger--open .hamburger__line:nth-child(1) {
+  transform: translateY(14px);
+}
+
+.hamburger__line-group.hamburger--open .hamburger__line:nth-child(3) {
+  transform: translateY(-16px) rotate(90deg);
+
 }

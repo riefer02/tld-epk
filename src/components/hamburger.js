@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 
-export default function Hamburger() {
-  const [isOpen, setOpen] = useState()
-
+export default function Hamburger({ navOpen, setNavOpen }) {
   return (
     <div className="hamburger__container">
-      <button className="hamburger__button">
-        <div className="hamburger__line-group">
+      <button onClick={()=>setNavOpen(!navOpen)} className="hamburger__button">
+        <div
+          className={`hamburger__line-group ${
+            navOpen ? "hamburger--open" : "hamburger--closed"
+          }`}
+        >
           <div className="hamburger__line"></div>
           <div className="hamburger__line"></div>
           <div className="hamburger__line"></div>
