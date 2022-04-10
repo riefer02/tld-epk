@@ -6,13 +6,18 @@
  */
 
 import * as React from "react"
+import { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Hamburger from "./hamburger"
+import SidebarNav from "./sidebar-nav"
 import "../assets/scss/index.scss"
 
 const Layout = ({ children }) => {
+  const [navOpen, setNavOpen] = useState(false)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,6 +34,8 @@ const Layout = ({ children }) => {
       <div className="page-background__image">
         <div className="page-background__overlay"></div>
       </div>
+      <Hamburger navOpen={navOpen} setNavOpen={setNavOpen} />
+      <SidebarNav navOpen={navOpen} />
       <main className="page-container__main container">{children}</main>
     </>
   )

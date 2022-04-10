@@ -1,0 +1,36 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 30em) {
+      @content;
+    } // 480px
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (min-width: 48em) {
+      @content;
+    } // 768px
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (min-width: 62em) {
+      @content;
+    } // 992px
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 75em) {
+      @content;
+    } // 1200
+  }
+
+  @if $breakpoint == xxl {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800
+  }
+}
+
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
