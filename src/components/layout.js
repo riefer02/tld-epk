@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Hamburger from "./hamburger"
+import SidebarNav from "./sidebar-nav"
 import "../assets/scss/index.scss"
 
 const Layout = ({ children }) => {
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
         <div className="page-background__overlay"></div>
       </div>
       <Hamburger navOpen={navOpen} setNavOpen={setNavOpen} />
+      <SidebarNav navOpen={navOpen} />
       <main className="page-container__main container">{children}</main>
     </>
   )

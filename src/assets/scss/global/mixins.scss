@@ -1,5 +1,3 @@
-@use "./variables" as v;
-
 @mixin respond($breakpoint) {
   @if $breakpoint == sm {
     @media only screen and (min-width: 30em) {
@@ -33,6 +31,6 @@
 }
 
 @function rem($value) {
-  $remValue: calc($value / v.$font-size-base-pixel) + rem;
+  $remValue: calc($value / 16) + rem;
   @return $remValue;
 }

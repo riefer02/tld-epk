@@ -1,11 +1,12 @@
-@use "./mixins" as *;
-@use "./colors" as *;
+@import "../global/mixins";
+@import "../global/variables";
+@import "../global/colors";
 
 .hamburger__container {
-  position: absolute;
+  position: fixed;
   right: rem(15);
   top: rem(10);
-  z-index: 1;
+  z-index: 2;
 }
 
 .hamburger__button {
@@ -15,6 +16,7 @@
   width: rem(60);
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
 .hamburger__line-group {
@@ -29,7 +31,7 @@
   height: 4px;
   background-color: $color-black;
   border-radius: 3px;
-  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 5px 0 rgba($color-black, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -50,11 +52,12 @@
   content: "";
   position: absolute;
   box-sizing: border-box;
-  width:rem(62);
-  height:rem(62);
-  border: 5px solid $color-white;
-  top: calc(50% - 35px);
-  left: calc(50% - 35px);
+  width: rem(62);
+  height: rem(62);
+  border: 5px solid transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 100%;
   transition: all 0.3s ease-in-out;
 }
@@ -72,10 +75,17 @@
 }
 
 .hamburger__line-group.hamburger--open .hamburger__line:nth-child(1) {
-  transform: translateY(14px);
+  transform: translateY(13px);
+
+  @include respond(sm) {
+    transform: translateY(14px);
+  }
 }
 
 .hamburger__line-group.hamburger--open .hamburger__line:nth-child(3) {
-  transform: translateY(-16px) rotate(90deg);
+  transform: translateY(-15px) rotate(90deg);
 
+  @include respond(sm) {
+    transform: translateY(-16px) rotate(90deg);
+  }
 }
