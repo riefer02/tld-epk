@@ -22,11 +22,7 @@
   }
 
   @include respond(lg) {
-    width: 20%;
-  }
-
-  @include respond(xl) {
-    width: 15%;
+    width: 25%;
   }
 }
 
