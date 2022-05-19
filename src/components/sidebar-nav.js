@@ -9,7 +9,7 @@ export default function SidebarNav({ navOpen }) {
       }`}
     >
       <div className="sidebar-nav__content">
-        <div className="sidebar-nav__list">
+        <div className="sidebar-nav__list" role="navigation">
           {navigationItems.map((navItem, index) => (
             <a key={index} href={navItem.url} className="sidebar-nav__item">
               {navItem.label}
