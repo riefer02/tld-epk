@@ -281,6 +281,7 @@ p {
 
 .button {
   @extend .flex-center;
+  @extend .tertiary-font-family;
   width: rem(270);
   font-size: $font-size-md;
   margin: rem(20) rem(10);
