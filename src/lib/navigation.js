@@ -24,10 +24,10 @@ export const navigationItems = [
     label: "Contact",
     url: "mailto:thelewddudes@gmail.com",
   },
-  {
-    label: "Store",
-    url: "https://www.thelewddudes.store",
-  },
+  // {
+  //   label: "Store",
+  //   url: "https://www.thelewddudes.store",
+  // },
   {
     label: "Shows",
     url: "https://livelovelewd.com",
