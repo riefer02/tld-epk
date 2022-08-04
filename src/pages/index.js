@@ -25,11 +25,11 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="The Lewd Dudes | TX Rock Band" />
-      <div className="page-marquee__container">
+      <header className="page-marquee__container">
         <i className="page-marquee__logo icon-tld-logo"></i>
         <h1>The Lewd Dudes | New Wave Rock Band</h1>
-      </div>
-      <div className="page-content">
+      </header>
+      <main className="page-content">
         <ContentRow animation="slide-up">
           <a
             className="panel-image__link flex-center"
@@ -147,7 +147,7 @@ const IndexPage = ({ data }) => {
             </ul>
           </div>
         </ContentRow>
-      </div>
+      </main>
       <ContentRow animation="slide-up">
         <footer className="mx-auto w-full text-center mb-10 secondary-font-family">
           &#169; {new Date().getFullYear()} The Lewd Dudes
