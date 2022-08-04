@@ -1,5 +1,5 @@
 export const biography = [
-  "The Lewd Dudes are the #1 hottest alternative rock band formed in Austin, Texas in 2017 by Andrew Riefenstahl (Producer + Guitar + Vox), Riley Sklar (Bass + Vox), Rankin Fetzer (Guitar + Vox), and Jordan Hughes (Drums + Vox).",
+  "The Lewd Dudes are the #1 hottest alternative rock band formed in Austin, Texas in 2017 by Andrew Riefenstahl (Producer + Guitar), Riley Sklar (Bass), Rankin Fetzer (Guitar), and Jordan Hughes (Drums).",
   "The Lewd Dudes label of party rock is a misnomer. Over the course of five years, they've changed. What started out as feel-good hooks and comical lyrics has become something entirely different. This ensemble has matured like aging wine.",
   "Latest Album: Pulling inspiration from their experiences and the collapse of live music during the pandemic, Habitable Zone sets you on a colossal interplanetary exploration of the human condition, self-reflection, mortality, failed relationships, over indulgance, bliss, and the hope for a new beginning.",
   `Latest Single: In spring 2022 they realized their knowledge had grown and decided to champion their own single, "Getaway", which revealed new layers to their musicality by featuring hip-hop artist Curbside Jones.`,
