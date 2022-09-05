@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <Seo title="The Lewd Dudes | TX Rock Band" />
       <header className="page-marquee__container">
         <i className="page-marquee__logo icon-tld-logo"></i>
-        <h1>The Lewd Dudes | New Wave Rock Band</h1>
+        <h1>The Lewd Dudes | Alternative Rock Band</h1>
       </header>
       <main className="page-content">
         <ContentRow animation="slide-up">
