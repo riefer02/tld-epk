@@ -57,6 +57,20 @@ function Seo({ description, lang, meta, title }) {
         "@type": "Place",
         "name": "Austin, TX"
       }
+      "potentialAction": {
+        "@type": "ListenAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://open.spotify.com/artist/65dA1HHvGplN8EcCk4YZOQ",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ],
+          "httpMethod": "GET",
+          "contentType": "text/html"
+        }
+      },
     }
   `
 
