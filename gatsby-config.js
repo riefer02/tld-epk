@@ -23,13 +23,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `The Lewd Dudes | Alternative Rock Band | Austin Texas`,
+        short_name: `The Lewd Dudes`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#51dd97`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#51dd97`,
         display: `minimal-ui`,
         icon: `src/images/favicon-tld-epk.png`, // This path is relative to the root of the site.
       },
