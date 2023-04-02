@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Feel Good Rock and Roll | Alternative Rock Band | Austin Texas" />
+      <Seo title="The Lewd Dudes | Alternative Rock Band | Austin Texas" />
       <header className="page-marquee__container">
         <i className="page-marquee__logo icon-tld-logo"></i>
         <h1>The Lewd Dudes | Alternative Rock Band | Austin, Texas</h1>
