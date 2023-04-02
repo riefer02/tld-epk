@@ -34,14 +34,14 @@ export const pressResources = [
     label: "Contact",
     url: "mailto:thelewddudes@gmail.com",
   },
-  {
-    label: "Store",
-    url: "https://www.thelewddudes.store",
-  },
-  {
-    label: "Shows",
-    url: "https://livelovelewd.com",
-  },
+  // {
+  //   label: "Store",
+  //   url: "https://www.thelewddudes.store",
+  // },
+  // {
+  //   label: "Shows",
+  //   url: "https://livelovelewd.com",
+  // },
   {
     label: "Stage Plot",
     url: "https://docs.google.com/document/d/1IwCr5WRJkKR6wQjxsjH5jvWFiXekpUvP49WoNARrSbQ/edit?usp=sharing",
