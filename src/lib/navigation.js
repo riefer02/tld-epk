@@ -24,8 +24,8 @@ export const navigationItems = [
     label: "Contact",
     url: "mailto:thelewddudes@gmail.com",
   },
-  {
-    label: "Shows",
-    url: "https://livelovelewd.com",
-  },
+  // {
+  //   label: "Shows",
+  //   url: "https://livelovelewd.com",
+  // },
 ]
