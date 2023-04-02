@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `The Lewd Dudes`,
-    description: `The official destination for The Lewd Dudes, a new wave alternative rock music and band from Austin, Texas.`,
+    description: `The official destination for The Lewd Dudes, a new wave alternative rock band from Austin, Texas.`,
     author: `@riefer02`,
     siteUrl: `https://thelewddudes.com`,
-    logo: `./src/images/tld-2021-black-logo-1x1.png`,
+    logo: `./src/images/favicon-tld-epk.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
