@@ -36,43 +36,40 @@ function Seo({ description, lang, meta, title }) {
   const defaultTitle = site.siteMetadata?.title
   const metaImage = getImage(ogImage)
 
-  const schemaMarkup = `
-    {
-      "@context": "http://schema.org",
-      "@type": "MusicGroup",
-      "name": "The Lewd Dudes",
-      "description": "The official destination for The Lewd Dudes, a new wave alternative rock band from Austin, Texas.",
-      "url": "https://thelewddudes.com",
-      "image": "https://thelewddudes.com/static/960286506a6cbe7eecf434d73eff876c/c85ea/tld-renee-dominguez.jpg",
-      "sameAs": [
-        "https://www.facebook.com/thelewddudes/",
-        "https://www.instagram.com/thelewddudes/",
-        "https://twitter.com/thelewddudes/"
-      ],
-      "genre": [
-        "New Wave",
-        "Alternative Rock"
-      ],
-      "location": {
-        "@type": "Place",
-        "name": "Austin, TX"
-      }
-      "potentialAction": {
-        "@type": "ListenAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://open.spotify.com/artist/65dA1HHvGplN8EcCk4YZOQ",
-          "actionPlatform": [
-            "http://schema.org/DesktopWebPlatform",
-            "http://schema.org/IOSPlatform",
-            "http://schema.org/AndroidPlatform"
-          ],
-          "httpMethod": "GET",
-          "contentType": "text/html"
-        }
+  const schemaMarkup = {
+    "@context": "http://schema.org",
+    "@type": "MusicGroup",
+    name: "The Lewd Dudes",
+    description:
+      "The official destination for The Lewd Dudes, a new wave alternative rock band from Austin, Texas.",
+    url: "https://thelewddudes.com",
+    image:
+      "https://thelewddudes.com/static/960286506a6cbe7eecf434d73eff876c/c85ea/tld-renee-dominguez.jpg",
+    sameAs: [
+      "https://www.facebook.com/thelewddudes/",
+      "https://www.instagram.com/thelewddudes/",
+      "https://twitter.com/thelewddudes/",
+    ],
+    genre: ["New Wave", "Alternative Rock"],
+    location: {
+      "@type": "Place",
+      name: "Austin, TX",
+    },
+    potentialAction: {
+      "@type": "ListenAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://open.spotify.com/artist/65dA1HHvGplN8EcCk4YZOQ",
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/IOSPlatform",
+          "http://schema.org/AndroidPlatform",
+        ],
+        httpMethod: "GET",
+        contentType: "text/html",
       },
-    }
-  `
+    },
+  }
 
   return (
     <Helmet
@@ -122,7 +119,7 @@ function Seo({ description, lang, meta, title }) {
     >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schemaMarkup }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
     </Helmet>
   )
