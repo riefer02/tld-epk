@@ -50,7 +50,7 @@ function Seo({ description, lang, meta, title }) {
       name: "Austin",
     },
     description:
-      "The official destination for The Lewd Dudes, a new wave alternative rock band from Austin, Texas.",
+      "The Lewd Dudes are the hottest feel good alternative rock and roll band, formed in Austin, Texas in 2017 by Andrew Riefenstahl (Producer + Guitar), Riley Sklar (Bass), Rankin Fetzer (Guitar), Scott Morgan (Keys), and Jordan Hughes (Drums).",
     url: "https://thelewddudes.com",
     image: {
       "@type": "ImageObject",
