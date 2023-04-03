@@ -40,11 +40,24 @@ function Seo({ description, lang, meta, title }) {
     "@context": "http://schema.org",
     "@type": "MusicGroup",
     name: "The Lewd Dudes",
+    "@id": "https://thelewddudes.com",
+    foundingDate: {
+      "@type": "Date",
+      "@value": "2017-06-01",
+    },
+    foundingLocation: {
+      "@type": "City",
+      name: "Austin",
+    },
     description:
       "The official destination for The Lewd Dudes, a new wave alternative rock band from Austin, Texas.",
     url: "https://thelewddudes.com",
-    image:
-      "https://thelewddudes.com/static/960286506a6cbe7eecf434d73eff876c/c85ea/tld-renee-dominguez.jpg",
+    image: {
+      "@type": "ImageObject",
+      url: "https://thelewddudes.com/static/960286506a6cbe7eecf434d73eff876c/c85ea/tld-renee-dominguez.jpg",
+      height: "800",
+      width: "1200",
+    },
     sameAs: [
       "https://www.facebook.com/thelewddudes/",
       "https://www.instagram.com/thelewddudes/",
@@ -69,6 +82,53 @@ function Seo({ description, lang, meta, title }) {
         contentType: "text/html",
       },
     },
+    member: [
+      {
+        "@type": "Person",
+        name: "Andrew Riefenstahl",
+        memberOf: {
+          "@type": "MusicGroup",
+          name: "The Lewd Dudes",
+        },
+        roleName: ["guitar", "lead vocals", "producer"],
+      },
+      {
+        "@type": "Person",
+        name: "Riley Sklar",
+        memberOf: {
+          "@type": "MusicGroup",
+          name: "The Lewd Dudes",
+        },
+        roleName: ["bass guitar", "vocals"],
+      },
+      {
+        "@type": "Person",
+        name: "Rankin Fetzer",
+        memberOf: {
+          "@type": "MusicGroup",
+          name: "The Lewd Dudes",
+        },
+        roleName: ["guitar", "lead vocals"],
+      },
+      {
+        "@type": "Person",
+        name: "Jordan Hughes",
+        memberOf: {
+          "@type": "MusicGroup",
+          name: "The Lewd Dudes",
+        },
+        roleName: "drums",
+      },
+      {
+        "@type": "Person",
+        name: "Scott Morgan",
+        memberOf: {
+          "@type": "MusicGroup",
+          name: "The Lewd Dudes",
+        },
+        roleName: "keyboards",
+      },
+    ],
   }
 
   return (
