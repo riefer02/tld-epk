@@ -117,10 +117,7 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-      />
+      <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
     </Helmet>
   )
 }
