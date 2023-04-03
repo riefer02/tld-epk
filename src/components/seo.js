@@ -54,9 +54,13 @@ function Seo({ description, lang, meta, title }) {
     url: "https://thelewddudes.com",
     image: {
       "@type": "ImageObject",
-      url: "https://thelewddudes.com/static/960286506a6cbe7eecf434d73eff876c/c85ea/tld-renee-dominguez.jpg",
+      url: "https://thelewddudes.com/tld-renee-dominguez.jpg",
       height: "800",
       width: "1200",
+    },
+    logo: {
+      "@type": "ImageObject",
+      url: "https://thelewddudes.com/tld-album-cover.jpg",
     },
     sameAs: [
       "https://www.facebook.com/thelewddudes/",
