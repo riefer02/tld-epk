@@ -22,6 +22,12 @@ const IndexPage = ({ data }) => {
   const malbecImage = getImage(data.malbecImage)
   const epImage = getImage(data.epImage)
 
+  const liveVideo = {
+    id: 2,
+    label: "Live Studio Performance of The Lewd Dudes",
+    videoId: "-bkpw7aevDw",
+  }
+
   return (
     <Layout>
       <Seo title="The Lewd Dudes | Alternative Rock Band | Austin Texas" />
@@ -35,12 +41,17 @@ const IndexPage = ({ data }) => {
           <a
             className="panel-image__link flex-center"
             href="https://www.keep-austin.com/article/137"
+            aria-label="Read more about Keep Austin Weird"
           >
-            <GatsbyImage image={keepAustinImage} placeholder="blurred" alt="" />
+            <GatsbyImage
+              image={keepAustinImage}
+              placeholder="blurred"
+              alt="The Lewd Dudes on the cover of a magazine that says, Keep Austin Weird"
+            />
           </a>
         </ContentRow>
         <ContentRow animation="fade">
-          <EmbedVideo videoId="-bkpw7aevDw" />
+          <EmbedVideo video={liveVideo} />
         </ContentRow>
         <ContentRow animation="">
           <div className="about-section font-bold">
@@ -52,11 +63,7 @@ const IndexPage = ({ data }) => {
         <ContentRow animation="slide-up">
           <div className="spotify-playlists">
             {playlists.map(playlist => (
-              <SpotifyPlayer
-                key={playlist.id}
-                type={playlist.type}
-                spotifyId={playlist.id}
-              />
+              <SpotifyPlayer key={playlist.id} playlist={playlist} />
             ))}
           </div>
         </ContentRow>
@@ -65,9 +72,9 @@ const IndexPage = ({ data }) => {
             <GatsbyImage image={poolImage} placeholder="blurred" alt="" />
           </div>
         </ContentRow>
-        {youtubeVideos.map((videoId, index) => (
+        {youtubeVideos.map((video, index) => (
           <ContentRow key={index} animation="fade">
-            <EmbedVideo videoId={videoId} />
+            <EmbedVideo video={video} />
           </ContentRow>
         ))}
         <ContentRow animation="fade">

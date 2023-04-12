@@ -1,10 +1,13 @@
 import React from "react"
 
-export default function SpotifyPlayer({ type, spotifyId }) {
+export default function SpotifyPlayer({ playlist }) {
+  const { type, id, label } = playlist
+
   return (
     <div className="spotify-player">
       <iframe
-        src={`https://open.spotify.com/embed/${type}/${spotifyId}`}
+        title={`The Lewd Dudes Album: ${label}`}
+        src={`https://open.spotify.com/embed/${type}/${id}`}
         style={{
           top: 0,
           left: 0,
