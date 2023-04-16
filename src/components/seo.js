@@ -23,9 +23,9 @@ function Seo({ description, lang, meta, title }) {
             logo
           }
         }
-        ogImage: file(relativePath: { eq: "tld-renee-dominguez.jpg" }) {
+        ogImage: file(relativePath: { eq: "the-lewd-dudes-og.png" }) {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, pngOptions: { quality: 50 })
+            gatsbyImageData(placeholder: BLURRED, pngOptions: { quality: 100 })
           }
         }
       }
@@ -54,7 +54,7 @@ function Seo({ description, lang, meta, title }) {
     url: "https://thelewddudes.com",
     image: {
       "@type": "ImageObject",
-      url: "https://thelewddudes.com/tld-renee-dominguez.jpg",
+      url: "https://thelewddudes.com/the-lewd-dudes-og.png",
       height: "800",
       width: "1200",
     },
